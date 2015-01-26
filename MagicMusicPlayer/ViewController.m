@@ -22,6 +22,8 @@
     BOOL isTouchDown;
     
     NSInteger nowIndex;
+     
+    NSMutableDictionary *failedDict;
 }
 
 @end
@@ -32,6 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     musicPlayer = [MXMusicPlayer sharedInstance];
+    
+    failedDict = [NSMutableDictionary dictionary];
     
     [slider addTarget:self action:@selector(sliderValueTouchDown) forControlEvents:UIControlEventTouchDown];
     [slider addTarget:self action:@selector(sliderValueTouchUp) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchCancel];
@@ -151,14 +155,34 @@
     //[self.view hideLoadingTips];
     slider.maximumValue = musicPlayer.duration;
     slider.value = musicPlayer.currentTime;
+    //取消红色失败标记
+    Music *m = [urlList objectAtIndex:nowIndex];
+    if(m && [failedDict objectForKey:m._id]){
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:nowIndex inSection:0]];
+        if(cell){
+            cell.textLabel.textColor = [UIColor blackColor];
+        }
+        [failedDict removeObjectForKey:m._id];
+    }
 }
 
 - (void)musicPlayerDelegateErrorDidOccur
 {
     //[self.view hideLoadingTips];
-    [self.view showTips:@"播放失败" duration:1.2f copletionBlock:^{
-        
-    }];
+    //播放失败 标记为红色
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:nowIndex inSection:0]];
+    if(cell){
+        cell.textLabel.textColor = [UIColor redColor];
+    }
+    Music *m = [urlList objectAtIndex:nowIndex];
+    if(m){
+        [failedDict setObject:m forKey:m._id];
+    }
+    //检测如果全部失败 则停止播放
+    if(failedDict.count < urlList.count){
+        //继续播放
+        [self next:nil];
+    }
 }
 
 - (void)musicPlayerDelegatePlaying:(float)progress
@@ -196,6 +220,11 @@
     Music *m = [urlList objectAtIndex:indexPath.row];
     if(m){
         cell.textLabel.text = m.name;
+        if([failedDict objectForKey:m._id]){
+            cell.textLabel.textColor = [UIColor redColor];
+        }else{
+            cell.textLabel.textColor = [UIColor blackColor];
+        }
     }
     return cell;
 }

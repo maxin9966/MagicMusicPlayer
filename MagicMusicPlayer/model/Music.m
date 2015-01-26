@@ -10,4 +10,12 @@
 
 @implementation Music
 
+- (id)init
+{
+    if(self = [super init]){
+        self._id = [MyCommon createUUID];
+    }
+    return self;
+}
+
 @end
