@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CBD37C91A75170B002F3C97 /* XLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37C81A75170B002F3C97 /* XLoader.m */; };
+		0CBD37CD1A751789002F3C97 /* PUAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37CC1A751789002F3C97 /* PUAudioManager.m */; };
+		0CBD37D01A7517A7002F3C97 /* PUCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37CF1A7517A7002F3C97 /* PUCache.m */; };
+		0CBD37E61A7518FE002F3C97 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37D41A7518FE002F3C97 /* AFHTTPRequestOperation.m */; };
+		0CBD37E71A7518FE002F3C97 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37D61A7518FE002F3C97 /* AFHTTPRequestOperationManager.m */; };
+		0CBD37E81A7518FE002F3C97 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37D81A7518FE002F3C97 /* AFHTTPSessionManager.m */; };
+		0CBD37E91A7518FE002F3C97 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37DB1A7518FE002F3C97 /* AFNetworkReachabilityManager.m */; };
+		0CBD37EA1A7518FE002F3C97 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37DD1A7518FE002F3C97 /* AFSecurityPolicy.m */; };
+		0CBD37EB1A7518FE002F3C97 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37DF1A7518FE002F3C97 /* AFURLConnectionOperation.m */; };
+		0CBD37EC1A7518FE002F3C97 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37E11A7518FE002F3C97 /* AFURLRequestSerialization.m */; };
+		0CBD37ED1A7518FE002F3C97 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37E31A7518FE002F3C97 /* AFURLResponseSerialization.m */; };
+		0CBD37EE1A7518FE002F3C97 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37E51A7518FE002F3C97 /* AFURLSessionManager.m */; };
+		0CBD37F61A751977002F3C97 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37F31A751977002F3C97 /* UncaughtExceptionHandler.m */; };
+		0CBD37F71A751977002F3C97 /* MyCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37F51A751977002F3C97 /* MyCommon.m */; };
+		0CBD37FA1A7519B5002F3C97 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37F91A7519B5002F3C97 /* UIView+HUD.m */; };
+		0CBD37FD1A7519DA002F3C97 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37FC1A7519DA002F3C97 /* MBProgressHUD.m */; };
+		0CBD38021A751E05002F3C97 /* AFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37FF1A751E05002F3C97 /* AFHttpRequest.m */; };
+		0CBD38031A751E05002F3C97 /* AFFileLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD38011A751E05002F3C97 /* AFFileLoad.m */; };
+		0CBD38061A7537A3002F3C97 /* PUFileDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD38051A7537A3002F3C97 /* PUFileDownloadOperation.m */; };
+		6FA163CE1A724E770005136B /* MXMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA163CD1A724E770005136B /* MXMusicPlayer.m */; };
+		6FAE3D861A70AC5400619C47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE3D851A70AC5400619C47 /* main.m */; };
+		6FAE3D8C1A70AC5400619C47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE3D8B1A70AC5400619C47 /* ViewController.m */; };
+		6FAE3D8F1A70AC5400619C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAE3D8D1A70AC5400619C47 /* Main.storyboard */; };
+		6FAE3D911A70AC5400619C47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAE3D901A70AC5400619C47 /* Images.xcassets */; };
+		6FAE3D941A70AC5400619C47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FAE3D921A70AC5400619C47 /* LaunchScreen.xib */; };
+		6FAE3DA01A70AC5400619C47 /* MagicMusicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE3D9F1A70AC5400619C47 /* MagicMusicPlayerTests.m */; };
+		6FAE3DB81A70AD9400619C47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE3DAB1A70AD9400619C47 /* AppDelegate.m */; };
+		9722F0D4C661EA98302911DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAE2C0E5F5FF9FF97D6ABD3 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6FAE3D9A1A70AC5400619C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FAE3D781A70AC5400619C47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FAE3D7F1A70AC5400619C47;
+			remoteInfo = MagicMusicPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0CBD37C71A75170B002F3C97 /* XLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLoader.h; sourceTree = "<group>"; };
+		0CBD37C81A75170B002F3C97 /* XLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLoader.m; sourceTree = "<group>"; };
+		0CBD37CB1A751789002F3C97 /* PUAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUAudioManager.h; sourceTree = "<group>"; };
+		0CBD37CC1A751789002F3C97 /* PUAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUAudioManager.m; sourceTree = "<group>"; };
+		0CBD37CE1A7517A7002F3C97 /* PUCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUCache.h; sourceTree = "<group>"; };
+		0CBD37CF1A7517A7002F3C97 /* PUCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUCache.m; sourceTree = "<group>"; };
+		0CBD37D11A751841002F3C97 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0CBD37D31A7518FE002F3C97 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		0CBD37D41A7518FE002F3C97 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		0CBD37D51A7518FE002F3C97 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		0CBD37D61A7518FE002F3C97 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		0CBD37D71A7518FE002F3C97 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		0CBD37D81A7518FE002F3C97 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		0CBD37D91A7518FE002F3C97 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		0CBD37DA1A7518FE002F3C97 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		0CBD37DB1A7518FE002F3C97 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		0CBD37DC1A7518FE002F3C97 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		0CBD37DD1A7518FE002F3C97 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		0CBD37DE1A7518FE002F3C97 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		0CBD37DF1A7518FE002F3C97 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		0CBD37E01A7518FE002F3C97 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		0CBD37E11A7518FE002F3C97 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		0CBD37E21A7518FE002F3C97 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		0CBD37E31A7518FE002F3C97 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		0CBD37E41A7518FE002F3C97 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		0CBD37E51A7518FE002F3C97 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		0CBD37F21A751977002F3C97 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		0CBD37F31A751977002F3C97 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		0CBD37F41A751977002F3C97 /* MyCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommon.h; sourceTree = "<group>"; };
+		0CBD37F51A751977002F3C97 /* MyCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommon.m; sourceTree = "<group>"; };
+		0CBD37F81A7519B5002F3C97 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		0CBD37F91A7519B5002F3C97 /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		0CBD37FB1A7519DA002F3C97 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0CBD37FC1A7519DA002F3C97 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		0CBD37FE1A751E05002F3C97 /* AFHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHttpRequest.h; sourceTree = "<group>"; };
+		0CBD37FF1A751E05002F3C97 /* AFHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHttpRequest.m; sourceTree = "<group>"; };
+		0CBD38001A751E05002F3C97 /* AFFileLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFFileLoad.h; sourceTree = "<group>"; };
+		0CBD38011A751E05002F3C97 /* AFFileLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFFileLoad.m; sourceTree = "<group>"; };
+		0CBD38041A7537A3002F3C97 /* PUFileDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUFileDownloadOperation.h; sourceTree = "<group>"; };
+		0CBD38051A7537A3002F3C97 /* PUFileDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUFileDownloadOperation.m; sourceTree = "<group>"; };
+		2A0A258B0610AF3DF36E9AAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6FA163CC1A724E770005136B /* MXMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMusicPlayer.h; sourceTree = "<group>"; };
+		6FA163CD1A724E770005136B /* MXMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMusicPlayer.m; sourceTree = "<group>"; };
+		6FAE3D801A70AC5400619C47 /* MagicMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FAE3D841A70AC5400619C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FAE3D851A70AC5400619C47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6FAE3D8A1A70AC5400619C47 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6FAE3D8B1A70AC5400619C47 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6FAE3D8E1A70AC5400619C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6FAE3D901A70AC5400619C47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6FAE3D931A70AC5400619C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6FAE3D991A70AC5400619C47 /* MagicMusicPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicMusicPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FAE3D9E1A70AC5400619C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FAE3D9F1A70AC5400619C47 /* MagicMusicPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicMusicPlayerTests.m; sourceTree = "<group>"; };
+		6FAE3DAA1A70AD9400619C47 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6FAE3DAB1A70AD9400619C47 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		793020D7C3B5B15C0E7E3799 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8CAE2C0E5F5FF9FF97D6ABD3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FAE3D7D1A70AC5400619C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9722F0D4C661EA98302911DD /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FAE3D961A70AC5400619C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CBD37C61A7516ED002F3C97 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				0CBD37CB1A751789002F3C97 /* PUAudioManager.h */,
+				0CBD37CC1A751789002F3C97 /* PUAudioManager.m */,
+				0CBD38041A7537A3002F3C97 /* PUFileDownloadOperation.h */,
+				0CBD38051A7537A3002F3C97 /* PUFileDownloadOperation.m */,
+				0CBD37FE1A751E05002F3C97 /* AFHttpRequest.h */,
+				0CBD37FF1A751E05002F3C97 /* AFHttpRequest.m */,
+				0CBD38001A751E05002F3C97 /* AFFileLoad.h */,
+				0CBD38011A751E05002F3C97 /* AFFileLoad.m */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		0CBD37D21A7518FE002F3C97 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				0CBD37D31A7518FE002F3C97 /* AFHTTPRequestOperation.h */,
+				0CBD37D41A7518FE002F3C97 /* AFHTTPRequestOperation.m */,
+				0CBD37D51A7518FE002F3C97 /* AFHTTPRequestOperationManager.h */,
+				0CBD37D61A7518FE002F3C97 /* AFHTTPRequestOperationManager.m */,
+				0CBD37D71A7518FE002F3C97 /* AFHTTPSessionManager.h */,
+				0CBD37D81A7518FE002F3C97 /* AFHTTPSessionManager.m */,
+				0CBD37D91A7518FE002F3C97 /* AFNetworking.h */,
+				0CBD37DA1A7518FE002F3C97 /* AFNetworkReachabilityManager.h */,
+				0CBD37DB1A7518FE002F3C97 /* AFNetworkReachabilityManager.m */,
+				0CBD37DC1A7518FE002F3C97 /* AFSecurityPolicy.h */,
+				0CBD37DD1A7518FE002F3C97 /* AFSecurityPolicy.m */,
+				0CBD37DE1A7518FE002F3C97 /* AFURLConnectionOperation.h */,
+				0CBD37DF1A7518FE002F3C97 /* AFURLConnectionOperation.m */,
+				0CBD37E01A7518FE002F3C97 /* AFURLRequestSerialization.h */,
+				0CBD37E11A7518FE002F3C97 /* AFURLRequestSerialization.m */,
+				0CBD37E21A7518FE002F3C97 /* AFURLResponseSerialization.h */,
+				0CBD37E31A7518FE002F3C97 /* AFURLResponseSerialization.m */,
+				0CBD37E41A7518FE002F3C97 /* AFURLSessionManager.h */,
+				0CBD37E51A7518FE002F3C97 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		6FAE3D771A70AC5400619C47 = {
+			isa = PBXGroup;
+			children = (
+				6FAE3D821A70AC5400619C47 /* MagicMusicPlayer */,
+				6FAE3D9C1A70AC5400619C47 /* MagicMusicPlayerTests */,
+				6FAE3D811A70AC5400619C47 /* Products */,
+				BD2F789CC5C00B4C646E26AD /* Pods */,
+				B8C5B8AC51A194A5734BE25E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6FAE3D811A70AC5400619C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3D801A70AC5400619C47 /* MagicMusicPlayer.app */,
+				6FAE3D991A70AC5400619C47 /* MagicMusicPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FAE3D821A70AC5400619C47 /* MagicMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				0CBD37C61A7516ED002F3C97 /* manager */,
+				6FAE3DA91A70AD9400619C47 /* common */,
+				6FAE3DAE1A70AD9400619C47 /* libs */,
+				6FAE3DAF1A70AD9400619C47 /* model */,
+				6FAE3DB21A70AD9400619C47 /* resource */,
+				6FAE3DB41A70AD9400619C47 /* ui */,
+				6FAE3D8A1A70AC5400619C47 /* ViewController.h */,
+				6FAE3D8B1A70AC5400619C47 /* ViewController.m */,
+				6FAE3D8D1A70AC5400619C47 /* Main.storyboard */,
+				6FAE3D901A70AC5400619C47 /* Images.xcassets */,
+				6FAE3D921A70AC5400619C47 /* LaunchScreen.xib */,
+				6FAE3D831A70AC5400619C47 /* Supporting Files */,
+			);
+			path = MagicMusicPlayer;
+			sourceTree = "<group>";
+		};
+		6FAE3D831A70AC5400619C47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3D841A70AC5400619C47 /* Info.plist */,
+				6FAE3D851A70AC5400619C47 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FAE3D9C1A70AC5400619C47 /* MagicMusicPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3D9F1A70AC5400619C47 /* MagicMusicPlayerTests.m */,
+				6FAE3D9D1A70AC5400619C47 /* Supporting Files */,
+			);
+			path = MagicMusicPlayerTests;
+			sourceTree = "<group>";
+		};
+		6FAE3D9D1A70AC5400619C47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3D9E1A70AC5400619C47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6FAE3DA91A70AD9400619C47 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3DAA1A70AD9400619C47 /* AppDelegate.h */,
+				6FAE3DAB1A70AD9400619C47 /* AppDelegate.m */,
+				0CBD37D11A751841002F3C97 /* PrefixHeader.pch */,
+				0CBD37F21A751977002F3C97 /* UncaughtExceptionHandler.h */,
+				0CBD37F31A751977002F3C97 /* UncaughtExceptionHandler.m */,
+				0CBD37F41A751977002F3C97 /* MyCommon.h */,
+				0CBD37F51A751977002F3C97 /* MyCommon.m */,
+				6FAE3DAC1A70AD9400619C47 /* category */,
+				6FAE3DAD1A70AD9400619C47 /* function */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		6FAE3DAC1A70AD9400619C47 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				0CBD37F81A7519B5002F3C97 /* UIView+HUD.h */,
+				0CBD37F91A7519B5002F3C97 /* UIView+HUD.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		6FAE3DAD1A70AD9400619C47 /* function */ = {
+			isa = PBXGroup;
+			children = (
+				0CBD37CE1A7517A7002F3C97 /* PUCache.h */,
+				0CBD37CF1A7517A7002F3C97 /* PUCache.m */,
+				6FA163CC1A724E770005136B /* MXMusicPlayer.h */,
+				6FA163CD1A724E770005136B /* MXMusicPlayer.m */,
+				0CBD37C71A75170B002F3C97 /* XLoader.h */,
+				0CBD37C81A75170B002F3C97 /* XLoader.m */,
+			);
+			path = function;
+			sourceTree = "<group>";
+		};
+		6FAE3DAE1A70AD9400619C47 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				0CBD37FB1A7519DA002F3C97 /* MBProgressHUD.h */,
+				0CBD37FC1A7519DA002F3C97 /* MBProgressHUD.m */,
+				0CBD37D21A7518FE002F3C97 /* AFNetworking */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		6FAE3DAF1A70AD9400619C47 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6FAE3DB21A70AD9400619C47 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3DB31A70AD9400619C47 /* image */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		6FAE3DB31A70AD9400619C47 /* image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		6FAE3DB41A70AD9400619C47 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3DB51A70AD9400619C47 /* controller */,
+				6FAE3DB61A70AD9400619C47 /* view */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		6FAE3DB51A70AD9400619C47 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		6FAE3DB61A70AD9400619C47 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6FAE3DB71A70AD9400619C47 /* cell */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6FAE3DB71A70AD9400619C47 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		B8C5B8AC51A194A5734BE25E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CAE2C0E5F5FF9FF97D6ABD3 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD2F789CC5C00B4C646E26AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A0A258B0610AF3DF36E9AAB /* Pods.debug.xcconfig */,
+				793020D7C3B5B15C0E7E3799 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FAE3D7F1A70AC5400619C47 /* MagicMusicPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FAE3DA31A70AC5400619C47 /* Build configuration list for PBXNativeTarget "MagicMusicPlayer" */;
+			buildPhases = (
+				A3691F56413EAE2531A05A86 /* Check Pods Manifest.lock */,
+				6FAE3D7C1A70AC5400619C47 /* Sources */,
+				6FAE3D7D1A70AC5400619C47 /* Frameworks */,
+				6FAE3D7E1A70AC5400619C47 /* Resources */,
+				B55F5D629909AC1ED49C5C9D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicMusicPlayer;
+			productName = MagicMusicPlayer;
+			productReference = 6FAE3D801A70AC5400619C47 /* MagicMusicPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FAE3D981A70AC5400619C47 /* MagicMusicPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FAE3DA61A70AC5400619C47 /* Build configuration list for PBXNativeTarget "MagicMusicPlayerTests" */;
+			buildPhases = (
+				6FAE3D951A70AC5400619C47 /* Sources */,
+				6FAE3D961A70AC5400619C47 /* Frameworks */,
+				6FAE3D971A70AC5400619C47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6FAE3D9B1A70AC5400619C47 /* PBXTargetDependency */,
+			);
+			name = MagicMusicPlayerTests;
+			productName = MagicMusicPlayerTests;
+			productReference = 6FAE3D991A70AC5400619C47 /* MagicMusicPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FAE3D781A70AC5400619C47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = antsmen;
+				TargetAttributes = {
+					6FAE3D7F1A70AC5400619C47 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					6FAE3D981A70AC5400619C47 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 6FAE3D7F1A70AC5400619C47;
+					};
+				};
+			};
+			buildConfigurationList = 6FAE3D7B1A70AC5400619C47 /* Build configuration list for PBXProject "MagicMusicPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6FAE3D771A70AC5400619C47;
+			productRefGroup = 6FAE3D811A70AC5400619C47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FAE3D7F1A70AC5400619C47 /* MagicMusicPlayer */,
+				6FAE3D981A70AC5400619C47 /* MagicMusicPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FAE3D7E1A70AC5400619C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FAE3D8F1A70AC5400619C47 /* Main.storyboard in Resources */,
+				6FAE3D941A70AC5400619C47 /* LaunchScreen.xib in Resources */,
+				6FAE3D911A70AC5400619C47 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FAE3D971A70AC5400619C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3691F56413EAE2531A05A86 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B55F5D629909AC1ED49C5C9D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FAE3D7C1A70AC5400619C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CBD37EE1A7518FE002F3C97 /* AFURLSessionManager.m in Sources */,
+				0CBD37EB1A7518FE002F3C97 /* AFURLConnectionOperation.m in Sources */,
+				0CBD37E61A7518FE002F3C97 /* AFHTTPRequestOperation.m in Sources */,
+				6FA163CE1A724E770005136B /* MXMusicPlayer.m in Sources */,
+				0CBD37E71A7518FE002F3C97 /* AFHTTPRequestOperationManager.m in Sources */,
+				0CBD37C91A75170B002F3C97 /* XLoader.m in Sources */,
+				0CBD37F71A751977002F3C97 /* MyCommon.m in Sources */,
+				0CBD37CD1A751789002F3C97 /* PUAudioManager.m in Sources */,
+				0CBD37E81A7518FE002F3C97 /* AFHTTPSessionManager.m in Sources */,
+				6FAE3DB81A70AD9400619C47 /* AppDelegate.m in Sources */,
+				6FAE3D8C1A70AC5400619C47 /* ViewController.m in Sources */,
+				0CBD37D01A7517A7002F3C97 /* PUCache.m in Sources */,
+				0CBD37FA1A7519B5002F3C97 /* UIView+HUD.m in Sources */,
+				0CBD37FD1A7519DA002F3C97 /* MBProgressHUD.m in Sources */,
+				0CBD37F61A751977002F3C97 /* UncaughtExceptionHandler.m in Sources */,
+				0CBD37EA1A7518FE002F3C97 /* AFSecurityPolicy.m in Sources */,
+				6FAE3D861A70AC5400619C47 /* main.m in Sources */,
+				0CBD37EC1A7518FE002F3C97 /* AFURLRequestSerialization.m in Sources */,
+				0CBD38061A7537A3002F3C97 /* PUFileDownloadOperation.m in Sources */,
+				0CBD37E91A7518FE002F3C97 /* AFNetworkReachabilityManager.m in Sources */,
+				0CBD37ED1A7518FE002F3C97 /* AFURLResponseSerialization.m in Sources */,
+				0CBD38021A751E05002F3C97 /* AFHttpRequest.m in Sources */,
+				0CBD38031A751E05002F3C97 /* AFFileLoad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FAE3D951A70AC5400619C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FAE3DA01A70AC5400619C47 /* MagicMusicPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6FAE3D9B1A70AC5400619C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FAE3D7F1A70AC5400619C47 /* MagicMusicPlayer */;
+			targetProxy = 6FAE3D9A1A70AC5400619C47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6FAE3D8D1A70AC5400619C47 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FAE3D8E1A70AC5400619C47 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6FAE3D921A70AC5400619C47 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FAE3D931A70AC5400619C47 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6FAE3DA11A70AC5400619C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6FAE3DA21A70AC5400619C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FAE3DA41A70AC5400619C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A0A258B0610AF3DF36E9AAB /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MagicMusicPlayer/common/PrefixHeader.pch";
+				INFOPLIST_FILE = MagicMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6FAE3DA51A70AC5400619C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 793020D7C3B5B15C0E7E3799 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MagicMusicPlayer/common/PrefixHeader.pch";
+				INFOPLIST_FILE = MagicMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6FAE3DA71A70AC5400619C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MagicMusicPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicMusicPlayer.app/MagicMusicPlayer";
+			};
+			name = Debug;
+		};
+		6FAE3DA81A70AC5400619C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MagicMusicPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicMusicPlayer.app/MagicMusicPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FAE3D7B1A70AC5400619C47 /* Build configuration list for PBXProject "MagicMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FAE3DA11A70AC5400619C47 /* Debug */,
+				6FAE3DA21A70AC5400619C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FAE3DA31A70AC5400619C47 /* Build configuration list for PBXNativeTarget "MagicMusicPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FAE3DA41A70AC5400619C47 /* Debug */,
+				6FAE3DA51A70AC5400619C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FAE3DA61A70AC5400619C47 /* Build configuration list for PBXNativeTarget "MagicMusicPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FAE3DA71A70AC5400619C47 /* Debug */,
+				6FAE3DA81A70AC5400619C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FAE3D781A70AC5400619C47 /* Project object */;
+}
