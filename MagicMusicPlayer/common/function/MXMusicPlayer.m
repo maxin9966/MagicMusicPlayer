@@ -15,12 +15,14 @@
     AVAudioPlayer *player;    
     NSTimer *timer;
     PUFileDownloadOperation *operation;
+    NSData *audioData;
 }
 
 @end
 
 @implementation MXMusicPlayer
 @synthesize delegate;
+@synthesize currentTime,duration;
 
 + (id)sharedInstance {
     static MXMusicPlayer *sharedManager = nil;
@@ -37,6 +39,24 @@
 
     }
     return self;
+}
+
+- (NSTimeInterval)duration
+{
+    return player.duration;
+}
+
+- (NSTimeInterval)currentTime
+{
+    return player.currentTime;
+}
+
+- (void)setCurrentTime:(NSTimeInterval)time
+{
+    currentTime = time;
+    if(player.duration){
+        player.currentTime = time;
+    }
 }
 
 - (void)setState:(MusicPlayerState)aState
@@ -57,20 +77,22 @@
 }
 
 //播放音频
-- (void)playMusicWithData:(NSData*)data
+- (void)playMusic
 {
-    if(!data){
+    if(!audioData){
         return;
     }
     //播放本地音乐
-    player = [[AVAudioPlayer alloc] initWithData:data error:nil];
-    player.delegate = self;
+    if(!player || player.data != audioData){
+        player = [[AVAudioPlayer alloc] initWithData:audioData error:nil];
+        player.delegate = self;
+    }
     AVAudioSession *session = [AVAudioSession sharedInstance];
     BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:nil];
     if(success){
         [session setActive:YES error:nil];
     }
-    if([player prepareToPlay] && [player play]){
+    if([player play]){
         self.state = MusicPlayerStatePlaying;
         //开始播放通知
         if(delegate && [delegate respondsToSelector:@selector(musicPlayerDelegateBeginPlay)]){
@@ -88,30 +110,30 @@
     }
 }
 
-//继续播放
-- (void)continuePlay
-{
-    if(!player.data){
-        return;
-    }
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    if(success){
-        [session setActive:YES error:nil];
-    }
-    if([player play]){
-        self.state = MusicPlayerStatePlaying;
-        //刷新进度条
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.05
-                                                 target:self
-                                               selector:@selector(refreshProgress:)
-                                               userInfo:nil
-                                                repeats:YES];
-    }else{
-        //播放失败
-        [self errorCallBack];
-    }
-}
+////继续播放
+//- (void)continuePlay
+//{
+//    if(!player.duration){
+//        return;
+//    }
+//    AVAudioSession *session = [AVAudioSession sharedInstance];
+//    BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+//    if(success){
+//        [session setActive:YES error:nil];
+//    }
+//    if([player play]){
+//        self.state = MusicPlayerStatePlaying;
+//        //刷新进度条
+//        timer = [NSTimer scheduledTimerWithTimeInterval:0.05
+//                                                 target:self
+//                                               selector:@selector(refreshProgress:)
+//                                               userInfo:nil
+//                                                repeats:YES];
+//    }else{
+//        //播放失败
+//        [self errorCallBack];
+//    }
+//}
 
 //播放失败
 - (void)errorCallBack
@@ -126,7 +148,7 @@
 - (void)refreshProgress:(NSTimer *)aTimer
 {
     if([player isPlaying]){
-        float progress=player.currentTime/player.duration;//当前时间、总时间
+        float progress = player.currentTime/player.duration;//当前时间、总时间
         //正在播放委托
         if([delegate respondsToSelector:@selector(musicPlayerDelegatePlaying:)])
         {
@@ -149,38 +171,31 @@
             return;
         }
             break;
-        case MusicPlayerStatePaused:
-        {
-            //判断数据是否已经加载
-            if(player.data){
-                //继续播放
-                [self continuePlay];
-                return;
-            }
-        }
         default:
             break;
     }
-    if(player){
-        player = nil;
+    if(audioData){
+        //播放
+        [self playMusic];
+        return;
     }
     //加载数据
     if([_url isFileURL]){
         //播放本地音频
-        NSData *data = [NSData dataWithContentsOfURL:_url];
-        if(data){
+        audioData = [NSData dataWithContentsOfURL:_url];
+        if(audioData){
             //播放
-            [self playMusicWithData:data];
+            [self playMusic];
         }else{
             //失败
             [self errorCallBack];
         }
     }else{
         //获取缓存数据
-        NSData *data = [[MyCommon audioManager] getAudioWithUrl:_url];
-        if(data){
+        audioData = [[MyCommon audioManager] getAudioWithUrl:_url];
+        if(audioData){
             //播放缓存音频
-            [self playMusicWithData:data];
+            [self playMusic];
         }else{
             //开始下载音频
             self.state = MusicPlayerStateDownloading;
@@ -188,9 +203,10 @@
                 [delegate musicPlayerDelegateBeginDownload];
             }
             operation = [[MyCommon audioManager] downloadAudioWithUrl:_url progress:nil completed:^(NSData *data, NSError *error) {
-                if(data){
+                audioData = data;
+                if(audioData){
                     //播放
-                    [self playMusicWithData:data];
+                    [self playMusic];
                 }else{
                     //失败
                     [self errorCallBack];
@@ -210,6 +226,8 @@
             break;
         case MusicPlayerStateDownloading:
             [operation cancel];
+            self.state = MusicPlayerStateIdle;
+            return;
             break;
         default:
             break;
@@ -237,6 +255,7 @@
             break;
     }
     [player stop];
+    player.currentTime = 0;
     self.state = MusicPlayerStateIdle;
     [timer invalidate];
     //结束播放委托
@@ -249,6 +268,7 @@
 - (void)reset
 {
     [self stop];
+    audioData = nil;
     player = nil;
     _url = nil;
 }

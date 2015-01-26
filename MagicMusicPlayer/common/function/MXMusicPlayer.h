@@ -39,6 +39,8 @@ typedef NS_ENUM(NSInteger, MusicPlayerState) {
 @property (nonatomic,assign) id<MusicPlayerDelegate>delegate;
 @property (nonatomic,strong) NSURL *url;
 @property (nonatomic,assign) MusicPlayerState state;
+@property (nonatomic,assign) NSTimeInterval currentTime;
+@property (nonatomic,assign,readonly) NSTimeInterval duration;
 
 + (MXMusicPlayer*)sharedInstance;
 
@@ -50,5 +52,8 @@ typedef NS_ENUM(NSInteger, MusicPlayerState) {
 
 //停止
 - (void)stop;
+
+//重置播放器
+- (void)reset;
 
 @end

@@ -26,6 +26,7 @@
 		0CBD38021A751E05002F3C97 /* AFHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD37FF1A751E05002F3C97 /* AFHttpRequest.m */; };
 		0CBD38031A751E05002F3C97 /* AFFileLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD38011A751E05002F3C97 /* AFFileLoad.m */; };
 		0CBD38061A7537A3002F3C97 /* PUFileDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD38051A7537A3002F3C97 /* PUFileDownloadOperation.m */; };
+		6FA081081A75F448004A8CB2 /* Music.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA081071A75F448004A8CB2 /* Music.m */; };
 		6FA163CE1A724E770005136B /* MXMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA163CD1A724E770005136B /* MXMusicPlayer.m */; };
 		6FAE3D861A70AC5400619C47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE3D851A70AC5400619C47 /* main.m */; };
 		6FAE3D8C1A70AC5400619C47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE3D8B1A70AC5400619C47 /* ViewController.m */; };
@@ -89,6 +90,8 @@
 		0CBD38041A7537A3002F3C97 /* PUFileDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUFileDownloadOperation.h; sourceTree = "<group>"; };
 		0CBD38051A7537A3002F3C97 /* PUFileDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUFileDownloadOperation.m; sourceTree = "<group>"; };
 		2A0A258B0610AF3DF36E9AAB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6FA081061A75F448004A8CB2 /* Music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Music.h; sourceTree = "<group>"; };
+		6FA081071A75F448004A8CB2 /* Music.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Music.m; sourceTree = "<group>"; };
 		6FA163CC1A724E770005136B /* MXMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMusicPlayer.h; sourceTree = "<group>"; };
 		6FA163CD1A724E770005136B /* MXMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMusicPlayer.m; sourceTree = "<group>"; };
 		6FAE3D801A70AC5400619C47 /* MagicMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +287,8 @@
 		6FAE3DAF1A70AD9400619C47 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				6FA081061A75F448004A8CB2 /* Music.h */,
+				6FA081071A75F448004A8CB2 /* Music.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				0CBD37EE1A7518FE002F3C97 /* AFURLSessionManager.m in Sources */,
 				0CBD37EB1A7518FE002F3C97 /* AFURLConnectionOperation.m in Sources */,
 				0CBD37E61A7518FE002F3C97 /* AFHTTPRequestOperation.m in Sources */,
+				6FA081081A75F448004A8CB2 /* Music.m in Sources */,
 				6FA163CE1A724E770005136B /* MXMusicPlayer.m in Sources */,
 				0CBD37E71A7518FE002F3C97 /* AFHTTPRequestOperationManager.m in Sources */,
 				0CBD37C91A75170B002F3C97 /* XLoader.m in Sources */,
