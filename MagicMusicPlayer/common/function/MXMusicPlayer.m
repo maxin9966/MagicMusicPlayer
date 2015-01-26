@@ -34,7 +34,7 @@
 - (id)init
 {
     if(self = [super init]){
-        
+
     }
     return self;
 }
@@ -65,6 +65,11 @@
     //播放本地音乐
     player = [[AVAudioPlayer alloc] initWithData:data error:nil];
     player.delegate = self;
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    if(success){
+        [session setActive:YES error:nil];
+    }
     if([player prepareToPlay] && [player play]){
         self.state = MusicPlayerStatePlaying;
         //开始播放通知
@@ -88,6 +93,11 @@
 {
     if(!player.data){
         return;
+    }
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    if(success){
+        [session setActive:YES error:nil];
     }
     if([player play]){
         self.state = MusicPlayerStatePlaying;
