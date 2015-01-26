@@ -52,13 +52,19 @@
     Music *m4 = [Music new];
     m4.name = @"如果这都不算爱";
     m4.url = [NSURL URLWithString:@"http://ws.stream.qqmusic.qq.com/30262255.mp3?vkey=38A9FA1A32B146BB5D72BA1D57FBD2A49A00BF23BB4E1BC2CE35FC60F4B18D4D&fromtag=52&guid=462A0E758603E4D02A003E67086520D6"];
+    Music *m5 = [Music new];
+    m5.name = @"绿光";
+    m5.url = [NSURL URLWithString:@"http://ws.stream.qqmusic.qq.com/30658138.mp3?vkey=92A6CD49E847DEF4D1D949C6E239B429580311E0AA26AA1689A7C9583AFADC8B&fromtag=52&guid=27CB4746D133446680B546EEB92064C9"];
+    Music *m6 = [Music new];
+    m6.name = @"爱在西元前";
+    m6.url = [NSURL URLWithString:@"http://ws.stream.qqmusic.qq.com/30858872.mp3?vkey=7F8462D16B22A4E98D5381D70F0C93A0AEC55973446C47754FFF8DC76D757A50&fromtag=52&guid=62BC262B889069737A2A2FCE6A1108C4"];
     
-    for(int i=0;i<4;i++){
-        [urlList addObject:m1];
-        [urlList addObject:m2];
-        [urlList addObject:m3];
-        [urlList addObject:m4];
-    }
+    [urlList addObject:m1];
+    [urlList addObject:m2];
+    [urlList addObject:m3];
+    [urlList addObject:m4];
+    [urlList addObject:m5];
+    [urlList addObject:m6];
 
     //观察播放器状态变更
     [RACObserve(musicPlayer, state) subscribeNext:^(NSNumber *number) {
@@ -101,7 +107,6 @@
     }
     Music *m = [urlList objectAtIndex:nowIndex];
     if(m){
-        [musicPlayer reset];
         musicPlayer.url = m.url;
         [musicPlayer play];
         [tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:nowIndex inSection:0] animated:YES scrollPosition:UITableViewScrollPositionMiddle];
@@ -144,16 +149,16 @@
 - (void)musicPlayerDelegateBeginPlay
 {
     //[self.view hideLoadingTips];
-    if(!isTouchDown){
-        slider.maximumValue = musicPlayer.duration;
-        slider.value = musicPlayer.currentTime;
-    }
+    slider.maximumValue = musicPlayer.duration;
+    slider.value = musicPlayer.currentTime;
 }
 
 - (void)musicPlayerDelegateErrorDidOccur
 {
     //[self.view hideLoadingTips];
-    [self.view showTips:@"好像哪里出错了"];
+    [self.view showTips:@"播放失败" duration:1.2f copletionBlock:^{
+        
+    }];
 }
 
 - (void)musicPlayerDelegatePlaying:(float)progress
@@ -198,16 +203,49 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)_tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 65;
 }
 
 - (void)tableView:(UITableView *)_tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(nowIndex!=indexPath.row){
         nowIndex = indexPath.row;
+        [musicPlayer reset];
         [self play];
     }else{
         [self playAndPause:nil];
+    }
+}
+
+#pragma mark - remoteControl
+- (void)remoteControlReceivedWithEvent: (UIEvent *) receivedEvent {
+    if (receivedEvent.type == UIEventTypeRemoteControl) {
+        
+        switch (receivedEvent.subtype) {
+                
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                [self playAndPause:nil];
+                break;
+                
+            case UIEventSubtypeRemoteControlPreviousTrack:
+                [self previous:nil];
+                break;
+                
+            case UIEventSubtypeRemoteControlNextTrack:
+                [self next:nil];
+                break;
+                
+            case UIEventSubtypeRemoteControlPlay:
+                [self playAndPause:nil];
+                break;
+                
+            case UIEventSubtypeRemoteControlPause:
+                [self playAndPause:nil];
+                break;
+                
+            default:
+                break;
+        }
     }
 }
 

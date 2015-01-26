@@ -110,31 +110,6 @@
     }
 }
 
-////继续播放
-//- (void)continuePlay
-//{
-//    if(!player.duration){
-//        return;
-//    }
-//    AVAudioSession *session = [AVAudioSession sharedInstance];
-//    BOOL success = [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-//    if(success){
-//        [session setActive:YES error:nil];
-//    }
-//    if([player play]){
-//        self.state = MusicPlayerStatePlaying;
-//        //刷新进度条
-//        timer = [NSTimer scheduledTimerWithTimeInterval:0.05
-//                                                 target:self
-//                                               selector:@selector(refreshProgress:)
-//                                               userInfo:nil
-//                                                repeats:YES];
-//    }else{
-//        //播放失败
-//        [self errorCallBack];
-//    }
-//}
-
 //播放失败
 - (void)errorCallBack
 {
@@ -164,15 +139,8 @@
     if(!_url){
         return;
     }
-    switch (_state) {
-        case MusicPlayerStateDownloading:
-        case MusicPlayerStatePlaying:
-        {
-            return;
-        }
-            break;
-        default:
-            break;
+    if(_state==MusicPlayerStateDownloading || _state==MusicPlayerStatePlaying){
+        return;
     }
     if(audioData){
         //播放
